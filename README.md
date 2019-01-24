@@ -1,7 +1,8 @@
 
-![](https://img.shields.io/github/license/horvaro/HostfileAdBlocker-Windows.svg?style=popout)
-![](https://img.shields.io/github/release-pre/horvaro/HostfileAdBlocker-Windows.svg?style=popout)
-![](https://img.shields.io/github/last-commit/horvaro/HostfileAdBlocker-Windows.svg?style=popout)
+[![license](https://img.shields.io/github/license/horvaro/HostfileAdBlocker-Windows.svg?style=popout)](https://github.com/horvaro/HostfileAdBlocker-Windows/blob/master/LICENSE)
+[![release](https://img.shields.io/github/release-pre/horvaro/HostfileAdBlocker-Windows.svg?style=popout)](https://github.com/horvaro/HostfileAdBlocker-Windows/releases)
+[![last commit](https://img.shields.io/github/last-commit/horvaro/HostfileAdBlocker-Windows.svg?style=popout)](https://github.com/horvaro/HostfileAdBlocker-Windows/commits/master)
+[![Build Status](https://img.shields.io/circleci/project/github/horvaro/HostfileAdBlocker-Windows.svg?style=popout)](https://circleci.com/gh/horvaro/HostfileAdBlocker-Windows)
 
 # HostfileAdBlocker-Windows
 Hostfile based AD-Blocking for Windows
