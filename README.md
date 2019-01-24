@@ -1,3 +1,8 @@
+
+![](https://img.shields.io/github/license/horvaro/HostfileAdBlocker-Windows.svg?style=popout)
+![](https://img.shields.io/github/release-pre/horvaro/HostfileAdBlocker-Windows.svg?style=popout)
+![](https://img.shields.io/github/last-commit/horvaro/HostfileAdBlocker-Windows.svg?style=popout)
+
 # HostfileAdBlocker-Windows
 Hostfile based AD-Blocking for Windows
 
