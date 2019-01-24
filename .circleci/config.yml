@@ -1,0 +1,22 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/golang:1.8
+    steps:
+      - checkout
+      - run: go build
+      - run:
+          name: Install SonarQube.io Scanner
+          command: |
+            wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.3.0.1492-linux.zip
+            unzip sonar-scanner-cli-3.3.0.1492-linux.zip
+      - run:
+          name: Run SonarQube.io Scanner
+          command: |
+            ./sonar-scanner-3.3.0.1492-linux/bin/sonar-scanner \
+              -Dsonar.projectKey=horvaro_HostfileAdBlocker-Windows \
+              -Dsonar.organization=horvaro-github \
+              -Dsonar.sources=. \
+              -Dsonar.host.url=https://sonarcloud.io \
+              -Dsonar.login=fe06c0d9b49077d912b63e2814322a563b340066
