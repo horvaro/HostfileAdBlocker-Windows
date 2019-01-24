@@ -39,10 +39,8 @@ func main() {
 
 func checkFile(file string) {
 	fileInfo, err := os.Stat(file)
-	if err != nil {
-		if os.IsNotExist(err) {
-			log.Fatal("File does not exist.")
-		}
+	if err != nil && os.IsNotExist(err) {
+		log.Fatal("File does not exist.")
 	}
 	log.Println("File does exist. Filesize: ", fileInfo.Size()/1000, "kB")
 }
