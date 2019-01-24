@@ -6,3 +6,19 @@ jobs:
     steps:
       - checkout
       - run: go build
+      - run:
+          name: Install SonarQube.io Scanner
+          command: |
+            wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.3.0.1492-linux.zip
+            apt-get install unzip -y
+            unzip sonar-scanner-cli-3.2.0.1227-linux.zip
+            PATH=$PATH:./sonar-scanner-3.2.0.1227-linux/bin
+      - run:
+          name: Run SonarQube.io Scanner
+          command: |
+            sonar-scanner \
+              -Dsonar.projectKey=horvaro_HostfileAdBlocker-Windows \
+              -Dsonar.organization=horvaro-github \
+              -Dsonar.sources=. \
+              -Dsonar.host.url=https://sonarcloud.io \
+              -Dsonar.login=fe06c0d9b49077d912b63e2814322a563b340066
