@@ -5,7 +5,8 @@
 
 [![CircleCI Build Status](https://img.shields.io/circleci/project/github/horvaro/HostfileAdBlocker-Windows.svg?label=CircleCI%20Build&style=popout)](https://circleci.com/gh/horvaro/HostfileAdBlocker-Windows)
 [![Travis CI Build Status](https://img.shields.io/travis/horvaro/HostfileAdBlocker-Windows.svg?label=Travis%20CI%20Build&style=popout)](https://travis-ci.org/horvaro/HostfileAdBlocker-Windows)
-[![Codeship Build Status](https://img.shields.io/codeship/fd701ea0-02c5-0137-326a-2655239ee73b.svg?label=Codeship%20Build)](https://app.codeship.com/projects/325138)
+[![Codeship Build Status](https://img.shields.io/codeship/fd701ea0-02c5-0137-326a-2655239ee73b.svg?label=Codeship%20Build)](https://app.codeship.com/projects/325138)  
+[![Shippable Build Status](https://img.shields.io/shippable/5c4afab1e77afd07000953e0.svg?label=Shippable%20Build&style=popout)](https://app.shippable.com/github/horvaro/HostfileAdBlocker-Windows)
 [![Codacy Quality](https://img.shields.io/codacy/grade/f65d57f777b644f7b24c36e8efc2574f.svg?label=Codacy%20quality%20grade&style=popout)](https://app.codacy.com/project/horvaro/HostfileAdBlocker-Windows/dashboard)
 [![Sonarcloud Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?label=Codacy%20quality%20grad&project=horvaro_HostfileAdBlocker-Windows&metric=alert_status)](https://sonarcloud.io/dashboard?id=horvaro_HostfileAdBlocker-Windows)
 
