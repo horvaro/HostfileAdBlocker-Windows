@@ -1,4 +1,8 @@
 language: go
+
+go:
+  - 1.11
+
 build:
   ci:
-    - go build
+    - go build -v ./...
