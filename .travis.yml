@@ -1,0 +1,10 @@
+os: windows
+language: go
+go:
+  - "1.11"
+  
+before_install:
+  - choco install golang -y
+  
+install:
+  - go build
