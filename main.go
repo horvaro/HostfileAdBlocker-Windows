@@ -12,6 +12,8 @@ import (
 var HOSTFILEPATH = "C:\\Windows\\System32\\drivers\\etc\\hosts"
 var DOMAINBLOCKFILE = "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts"
 
+var HostFile, BlockFile string
+
 var (
 	fileInfo os.FileInfo
 	err      error
@@ -19,6 +21,8 @@ var (
 
 func main() {
 	log.Println("Main started")
+	
+	checkArguments(os.Args[1:])
 
 	checkFile(HOSTFILEPATH)
 	createBackup(HOSTFILEPATH)
@@ -35,6 +39,19 @@ func main() {
 	log.Println("DNS Cache flushed🚽")
 
 	log.Println("End Main")
+}
+
+func checkArguments(args []string){
+    if args[0] == "help" {
+        printHelp()
+        os.Exit(0)
+    }
+    if len(args[0]) > 2 {
+        HostFile = args[0]
+    }
+    if len(args[1]) > 2 {
+        BlockFile = args[1]
+    }
 }
 
 func checkFile(file string) {
@@ -92,8 +109,12 @@ func createBackup(filepath string) {
 		fmt.Printf("The copy operation failed %q\n", err)
 		log.Fatal(err)
 	} else {
-		fmt.Printf("Copied %d bytes!\n", nBytes)
+		log.Printf("Copied %d bytes!\n", nBytes)
 	}
+}
+
+func printHelp() {
+    fmt.Printf("Called help")
 }
 
 func copy(src, dst string) (int64, error) {
