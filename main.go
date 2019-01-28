@@ -21,7 +21,7 @@ var (
 
 func main() {
 	log.Println("Main started")
-	
+
 	checkArguments(os.Args[1:])
 
 	checkFile(HOSTFILEPATH)
@@ -41,17 +41,17 @@ func main() {
 	log.Println("End Main")
 }
 
-func checkArguments(args []string){
-    if args[0] == "help" {
-        printHelp()
-        os.Exit(0)
-    }
-    if len(args[0]) > 2 {
-        HostFile = args[0]
-    }
-    if len(args[1]) > 2 {
-        BlockFile = args[1]
-    }
+func checkArguments(args []string) {
+	if len(args) > 0 && args[0] == "help" {
+		printHelp()
+		os.Exit(0)
+	}
+	if len(args) > 0 && len(args[0]) > 2 {
+		HostFile = args[0]
+	}
+	if len(args) > 1 && len(args[1]) > 2 {
+		BlockFile = args[1]
+	}
 }
 
 func checkFile(file string) {
@@ -114,7 +114,7 @@ func createBackup(filepath string) {
 }
 
 func printHelp() {
-    fmt.Printf("Called help")
+	fmt.Printf("Called help")
 }
 
 func copy(src, dst string) (int64, error) {
