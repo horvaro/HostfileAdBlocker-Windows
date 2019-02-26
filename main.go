@@ -114,7 +114,7 @@ func createBackup(filepath string) {
 }
 
 func printHelp() {
-	fmt.Printf("Called help")
+	fmt.Printf("Usage: HostfileAdBlocker-Windows.exe [local hostfile] [remote blockfile]")
 }
 
 func copy(src, dst string) (int64, error) {
